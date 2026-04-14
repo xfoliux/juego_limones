@@ -48,10 +48,10 @@ function limpiarCanvas(){
 
 function actualizarPantalla(){
     limpiarCanvas();
+    limitarMovimiento();
     dibujarPersonaje();
     dibujarSuelo();
     dibujarLimon();
-    limitarMovimiento();
 }
 
 function moverIzquierda(){
@@ -101,7 +101,7 @@ function detectarAtrapado(){
 }
 
 function detectarPiso(){
-    if (limonY + ALTURA_LIMON >= canvas.height - ALTURA_SUELO){
+    if (limonY + ALTURA_LIMON == canvas.height - ALTURA_SUELO){
     aparecerLimon();
     vidas = vidas -1;
     mostrarEnSpan("txtVidas",vidas);
@@ -114,5 +114,22 @@ function detectarPiso(){
 function aparecerLimon(){
     limonX=generarAleatorio(0,canvas.width-ANCHO_LIMON);
     limonY=0;
+    actualizarPantalla();
+}
+
+function reiniciar(){
+    puntaje = 0;
+    vidas = 3;
+    velocidadCaida = 200;
+
+    personajeX = canvas.width / 2;
+    personajeY = canvas.height - (ALTURA_SUELO + ALTURA_PERSONAJE);
+    aparecerLimon();
+
+    mostrarEnSpan("txtPuntaje",puntaje);
+    mostrarEnSpan("txtVidas",vidas);
+
+    clearInterval(intervalo);
+    intervalo = setInterval(bajarLimon,velocidadCaida);
     actualizarPantalla();
 }

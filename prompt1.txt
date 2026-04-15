@@ -3,4 +3,5 @@
     Modifica el html y el css no cambies los ids de los componentes
     Mantén separados el html y el css.
 
-2   
+2   mejora el estilo de los botones usa iconos, usa brillo
+    (se realiza un git restore . para volver con los codigos anteriores)

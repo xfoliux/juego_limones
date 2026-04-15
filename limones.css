@@ -106,3 +106,33 @@ canvas {
 .reiniciar:hover {
   box-shadow: 0 8px 18px rgba(244, 63, 94, 0.5);
 }
+
+/* IMAGEN SUPERIOR */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.imagen-top {
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #facc15;
+
+  /* EFECTO GLOW */
+  box-shadow:
+    0 0 15px rgba(250, 204, 21, 0.6),
+    0 0 40px rgba(250, 204, 21, 0.4);
+
+  /* SUAVIZADO */
+  transition: all 0.3s ease;
+}
+
+/* HOVER (opcional, queda brutal 🔥) */
+.imagen-top:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 25px rgba(250, 204, 21, 0.9),
+    0 0 60px rgba(250, 204, 21, 0.7);
+}

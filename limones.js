@@ -133,3 +133,16 @@ function reiniciar(){
     intervalo = setInterval(bajarLimon,velocidadCaida);
     actualizarPantalla();
 }
+
+// CONTROLES CON TECLADO
+    document.addEventListener("keydown", function(event) {
+
+    if (event.key === "ArrowLeft" || event.key.toLowerCase() === "a") {
+        moverIzquierda();
+    }
+
+    if (event.key === "ArrowRight" || event.key.toLowerCase() === "d") {
+        moverDerecha();
+    }
+
+    });

@@ -1,0 +1,6 @@
+1   Actúa como diseñador grafico
+    Mejora la parte visual de este juego
+    Modifica el html y el css no cambies los ids de los componentes
+    Mantén separados el html y el css.
+
+2   

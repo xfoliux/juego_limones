@@ -1,31 +1,108 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: white;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
+/* CONTENEDOR */
 .contenedor {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
-  display: block;
-  margin: 20px auto;
+/* HEADER */
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #facc15;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
 }
 
+.subtitulo {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.autor {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* CANVAS */
+canvas {
+  background: radial-gradient(circle, #1f2937, #020617);
+  border: 3px solid #38bdf8;
+  border-radius: 12px;
+  display: block;
+  margin: 25px auto;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+/* PANEL */
 .panel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   margin: 20px 0;
 }
 
+.card {
+  background: #1e293b;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  min-width: 120px;
+}
+
+.label {
+  display: block;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* BOTONES */
+.botones {
+  margin-top: 20px;
+}
+
 .botones button {
-  margin: 5px;
-  padding: 10px 16px;
+  margin: 8px;
+  padding: 12px 20px;
   font-size: 16px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  background: linear-gradient(145deg, #38bdf8, #0ea5e9);
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.botones button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+}
+
+.botones button:active {
+  transform: scale(0.95);
+}
+
+/* BOTÓN REINICIAR */
+.reiniciar {
+  background: linear-gradient(145deg, #f43f5e, #e11d48);
+}
+
+.reiniciar:hover {
+  box-shadow: 0 8px 18px rgba(244, 63, 94, 0.5);
 }

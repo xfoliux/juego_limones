@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Caza Estrellas</title>
+  <meta charset="UTF-8">
+  <title>Caza Limones</title>
   <link rel="stylesheet" href="limones.css">
   <script src="utils.js"></script>
+</head>
 
-  </head>
+<body onload="iniciar()">
+  <div class="contenedor">
 
-    <body onload = "iniciar()">
-      <div class="contenedor">
-        <h1>Atrapar Limones</h1>
-        <p>Si del cielo te caen limones ..... </p>
-        <h2>Autor: Cristian Gualán</h2>
-        <canvas id="areaJuego" width="600" height="400"></canvas>
+    <header class="header">
+      <h1>🍋 Atrapar Limones</h1>
+      <p class="subtitulo">Si del cielo te caen limones...</p>
+      <h2 class="autor">Autor: Cristian Gualán</h2>
+    </header>
 
-        <div class="panel">
-          <p>Puntaje: <span id="txtPuntaje">0</span></p>
-          <p>Vidas: <span id="txtVidas">3</span></p>
-        </div>
-        <div class="botones">
-          <button onclick="moverIzquierda()">Izquierda</button>
-          <button onclick="moverDerecha()">Derecha</button>
-          <button onclick="reiniciar()">Reiniciar</button>
-        </div>
+    <section class="juego">
+      <canvas id="areaJuego" width="600" height="400"></canvas>
+    </section>
+
+    <section class="panel">
+      <div class="card">
+        <span class="label">Puntaje</span>
+        <span id="txtPuntaje" class="valor">0</span>
       </div>
-      <script src="limones.js"></script>
-    </body>
+
+      <div class="card">
+        <span class="label">Vidas</span>
+        <span id="txtVidas" class="valor">3</span>
+      </div>
+    </section>
+
+    <section class="botones">
+      <button onclick="moverIzquierda()">⬅ Izquierda</button>
+      <button onclick="moverDerecha()">Derecha ➡</button>
+      <button class="reiniciar" onclick="reiniciar()">🔄 Reiniciar</button>
+    </section>
+
+  </div>
+
+  <script src="limones.js"></script>
+</body>
 </html>

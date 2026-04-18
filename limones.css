@@ -3,7 +3,7 @@ body {
   /* IMAGEN DE FONDO */
   background:
     linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
-    url("fondo.png") no-repeat center center fixed;
+    url("fondo_galactico.png") no-repeat center center fixed;
   background-size: cover;
 
   color: #e2e8f0;
@@ -39,7 +39,7 @@ body {
 
 /* CANVAS */
 canvas {
-  background: radial-gradient(circle, #1f2937, #020617);
+  background: radial-gradient(circle, #2a313b, #03071a);
   border: 3px solid #38bdf8;
   border-radius: 12px;
   display: block;
